@@ -4,17 +4,22 @@
   background-color: var(--medium-color);
 }
 
+.skills .section-title h3 {
+  font-size: 3em;
+  color: var(--highlight-color);
+}
+
 .skills .section-title {
   margin-bottom: 30px;
   text-align: center;
+  color: var(--highlight-color);
 }
 
-.skills .section-title h3 {
-  font-size: 3em;
-}
+
 
 .skills .single-feature {
-  text-align: center; /* Change to center alignment */
+  text-align: center;
+  /* Change to center alignment */
   padding: 35px;
   background-color: var(--light-color);
   border-radius: 6px;
@@ -23,6 +28,9 @@
   border: 1px solid var(--medium-color);
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
   box-shadow: 0px 4px 6px var(--medium-color);
+  height: 80%;
+  /* 讓框框高度一致 */
+  color: var(--dark-color);
 }
 
 .skills .single-feature:hover {
@@ -42,7 +50,6 @@
   font-size: 20px;
   border-radius: 7px;
   box-shadow: 0px 4px 6px var(--medium-color);
-  
   margin: 0px 5px 30px 5px;
 }
 
@@ -54,7 +61,6 @@
 
 .skills .single-feature p {
   line-height: 22px;
+  /* text-align: left; */
+  /* 將描述欄位內容靠左對齊 */
 }
-
-
-  

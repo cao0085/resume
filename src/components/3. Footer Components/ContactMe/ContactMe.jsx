@@ -31,8 +31,7 @@ const ContactMe = () => {
           <form ref={form} onSubmit={sendEmail} className='contact-form'>
             <h5 className='title'>Contact Me</h5>
             <p className='description'>
-              Feel free to contact me if you like to reach out or have any
-              questions.
+              This is just a sample and is not functional yet.
             </p>
             <div>
               <input
@@ -71,7 +70,7 @@ const ContactMe = () => {
                 <div className='success-message'>
                   <h4>Message Sent Successfully!</h4>
                   <p>Thank you for contacting me.</p>
-                  
+
                 </div>
               )}
             </div>

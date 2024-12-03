@@ -23,8 +23,8 @@ const Achievement = () => {
         <div className="row">
           <div className="col-lg-10 offset-lg-1 col-md-12 col-12">
             <div className="title">
-              <h2>"Lorem ipsum dolor sit amet, consectetur adipiscing"</h2>
-              <p>Fusce at libero id massa ornare molestie sed eu tellus.</p>
+              <h2>Writing code that can understand tomorrow is hard.</h2>
+              <p>Praying the code I write today is clean and easy to maintain tomorrow...</p>
             </div>
           </div>
         </div>

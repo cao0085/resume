@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Oswald:wght@200&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Oswald:wght@200&display=swap');
@@ -8,13 +7,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 
 :root {
-  --light-white: #f2fbfc ;
+  --light-white: #f2fbfc;
   --light-color: #ffffff;
   --medium-color: #B9BAB3;
   --dark-color: #001F26;
   --highlight-color: #cfe5eb;
   --accent-color: #6d8a92;
 
+}
+
+:root {
+  --light-white: #ffffff;
+  /* 純白色，作為主要背景色 */
+  --light-color: #ffffff;
+  /* 亮紫色，用於次要背景或高亮區域 */
+  --medium-color: #42007b;
+  /* 深紫色，用於卡片背景或標題 */
+  --dark-color: #050505;
+  /* 深灰色，用於主要文字或背景 */
+  --highlight-color: #56d722;
+  /* 綠色，用於高亮按鈕或積極行動點 */
+  --accent-color: #5d03a5;
+  /* 亮紫色，用於邊框、按鈕等次要點綴 */
 }
 
 * {
@@ -24,20 +38,23 @@
 
 html {
   scroll-behavior: smooth;
- 
+
 }
 
 body {
-  
+
   letter-spacing: 0.2em;
   font-weight: normal;
   font-style: normal;
   overflow-x: hidden;
-  
+
 }
 
-h1, h2, h3 {
-  font-family: 'Alex Brush', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: 'Oswald', sans-serif;
+
 }
 
 p {
@@ -50,6 +67,7 @@ p {
 
 h3 {
   font-family: 'PT Sans', sans-serif;
+
 }
 
 

@@ -10,7 +10,7 @@ const Hero = () => {
   const { firstname, lastname } = name;
 
   const heroStyle = {
-    backgroundImage: `url(${backgroundImageUrl})`,
+    backgroundColor: 'var(--dark-color)', // 引用 CSS 變量
   };
 
   return (
@@ -21,13 +21,16 @@ const Hero = () => {
           <div className='hero-content'>
             <div className='name-container wow fadeInLeft' data-wow-delay='.4s'>
               <name>
-                <h1 className='first-name'>{firstname}</h1>
-                <h1 className='last-name'>{lastname}</h1>
+                {/* <h1 className='first-name'>{firstname}</h1>
+                <h1 className='last-name'>{lastname}</h1> */}
+                <h1 className='name'>
+                  {firstname} {lastname}
+                </h1>
               </name>
             </div>
             <div className='typewriter-container wow fadeInLeft' data-wow-delay='.6s'>
               <Typewriter />
-      
+
             </div>
             <div className='btn-pos'>
               {socialProfiles.map((profile, index) => (

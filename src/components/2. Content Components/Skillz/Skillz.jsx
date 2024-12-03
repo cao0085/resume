@@ -17,11 +17,11 @@ const Skillz = () => {
                             <h3 className="wow zoomIn" data-wow-delay=".2s">
                                 Skills
                             </h3>
-                            <h2 className="wow fadeInUp" data-wow-delay=".4s">
-                            Exploring and Expanding My area of focus
-                            </h2>
+                            {/* <h2 className="wow fadeInUp" data-wow-delay=".4s">
+                                Exploring and Expanding My area of focus
+                            </h2> */}
                             <p className="wow fadeInUp" data-wow-delay=".6s">
-                            A diverse set of skills and technologies I have acquired to develop impactful solutions
+                                Embracing a coaching-style learning approach with the ability to independently solve problems and achieve growth.
                             </p>
                         </div>
                     </div>
@@ -49,7 +49,11 @@ const Skillz = () => {
                                     })}
                                 </div>
                                 <h3>{category.title}</h3>
-                                <p>{category.description}</p>
+                                <div>
+                                    {category.description.map((line, index) => (
+                                        <p key={index}>{line}</p>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     ))}

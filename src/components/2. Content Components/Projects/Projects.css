@@ -1,164 +1,218 @@
 @import url('../../../assets/css/main.css');
 
+.section-title {
+  text-align: center !important;
+  color: var(--highlight-color);
+}
+
+.section-title h3 {
+  font-size: 2.5rem;
+  /* 設置文字大小 */
+  line-height: 1.4;
+  /* 行高，讓文字更易於閱讀 */
+  font-weight: bold;
+  /* 突出標題 */
+  color: var(--highlight-color);
+  /* 可選：設置文字顏色，例如高亮綠色 */
+}
+
+/* 卡片容器樣式 */
+.card {
+  background-color: var(--light-color);
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px var(--medium-color);
+  margin-bottom: 20px;
+  height: 450px;
+  /* 固定高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* 卡片內容樣式，啟用滾動條 */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* 內容從頂部排列 */
+  height: 100%;
+  /* 撐滿卡片高度 */
+  overflow-y: auto;
+  /* 垂直滾動 */
+  padding: 20px;
+  /* 添加內邊距 */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* 平滑滾動效果 */
+}
+
+/* 滾動條樣式 */
+.card-content::-webkit-scrollbar {
+  width: 8px;
+  /* 滾動條寬度 */
+}
+
+.card-content::-webkit-scrollbar-thumb {
+  background-color: var(--medium-color);
+  /* 滾動條顏色 */
+  border-radius: 4px;
+}
+
+.card-content::-webkit-scrollbar-track {
+  background-color: var(--light-color);
+  /* 滾動條背景顏色 */
+}
+
+/* 卡片標題樣式 */
+.card-header {
+  margin-bottom: 1rem;
+  background-color: var(--light-color) !important;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* 卡片描述樣式 */
+.card-description {
+  margin-top: 0.5rem;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  /* 撐滿可用空間 */
+  text-align: left;
+  /* 左對齊描述內容 */
+}
+
+/* 卡片底部樣式 */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: var(--light-color) !important;
+  border: none !important;
+}
+
+.card-footer .btn {
+  flex: 1;
+  margin: 0 0.5rem;
+}
+
+.btn-primary {
+  background-color: var(--accent-color) !important;
+  color: var(--dark-color) !important;
+  border-radius: 4px;
+  border: none !important;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--highlight-color) !important;
+  color: var(--dark-color) !important;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--medium-color) !important;
+  color: var(--light-color) !important;
+  border-radius: 4px;
+  border: none !important;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: var(--medium-color) !important;
+  color: var(--dark-color) !important;
+  transform: translateY(-1px);
+}
+
 .demo-container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 75%; 
-  }
-  
-  .demo-container img,
-  .demo-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+  position: relative;
+  width: 100%;
+  height: auto;
 
-  h2, h3, p {
-    text-align: center;
-  }
+  padding: 10px;
+  box-sizing: border-box;
 
-  
-  
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-  
-  .card-header {
-    margin-bottom: 1rem;
-    background-color: var(--light-color)!important;
-    
-  }
-  
-  .card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .card-description {
-    margin-top: 0.5rem;
-  }
-  
-  .card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
-    background-color: var(--light-color)!important;
-    border: none !important;
-  }
-  
-  .card-footer .btn {
-    flex: 1;
-    margin: 0 0.5rem;
-  }
-  
+  text-align: left;
+  word-wrap: break-word;
+
+  white-space: normal;
+
+}
+
+.demo-container ul {
+  margin-top: 15px;
+
+  margin-bottom: 15px;
+
+  padding-left: 20px;
+
+  font-family: 'Arial', sans-serif;
+  color: rgba(0, 0, 0, 0.9);
+  list-style: none;
+  /* 移除項目符號 */
+  /* 黑色文字，透明度為 70% */
+}
+
+.demo-container ul li {
+  margin-bottom: 18px;
+}
+
+.demo-container img,
+.demo-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
   .card {
-    background-color: var(--light-color);
-    width: 100%;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px var(--medium-color);
-    margin-bottom: 20px;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-  
-  
-  .card:last-child {
-    margin-right: 0;
-  }
-  
-  .card-content {
-    margin-left: -20px;
-    margin-right: 20px;
-    padding: 20px;
-    background-color: var(--light-color) !important;
-  }
-  
-  .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .card-description {
-    margin-bottom: 20px;
-  }
-  
-  .btn-primary {
-    background-color: var(--accent-color) !important;
-    color: var(--dark-color) !important;
-    border-radius: 4px;
-    border: none !important;
-    padding: 8px 16px;
-    cursor: pointer;
-  }
-  
-  .btn-primary:hover {
-    background-color: var(--highlight-color) !important;
-    color: var(--dark-color) !important;
-    transform: translateY(-1px);
-  }
-  
-  .btn-secondary {
-    background-color: var(--medium-color) !important;
-    color: var(--light-color) !important;
-    border-radius: 4px;
-    border: none !important;
-    padding: 8px 16px;
-    cursor: pointer;
-  }
-  
-  .btn-secondary:hover {
-    background-color: var(--medium-color) !important;
-    color: var(--dark-color) !important;
-    transform: translateY(-1px);
-  }
-  
-  
-  .iframe-container {
-    position: relative;
-    width: 100%;
     height: 400px;
+    /* 在小屏幕上縮小高度 */
   }
-  
-  .iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+
+  .card-content {
+    padding: 15px;
+    /* 減少內邊距 */
+    font-size: 14px;
+    /* 縮小文字大小 */
   }
-  
-  .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: 350px;
+    /* 更小屏幕進一步縮小高度 */
   }
-  
-  .button-container .btn {
-    flex: 1;
-    margin: 0 5px;
-    text-align: center;
+
+  .card-content {
+    font-size: 12px;
+    /* 調整文字大小 */
+    line-height: 1.4;
+    /* 縮小行距 */
   }
-  
-  .slick-prev:before,
-  .slick-next:before {
-    color: var(--dark-color);
-    font-size: 30px;
-  }
-  
-  .slick-prev {
-    left: -30px;
-  }
-  
-  .slick-next {
-    right: -30px;
-  }
-  
+}
+
+/* Slider 的按鈕樣式 */
+.slick-prev:before,
+.slick-next:before {
+  color: var(--dark-color);
+  font-size: 30px;
+}
+
+.slick-prev {
+  left: -30px;
+}
+
+.slick-next {
+  right: -30px;
+}
